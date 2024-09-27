@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #0e0e0e;
+}
+
+.calculator {
+    width: 380px;
+    padding: 15px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #1a1a1a, #2e2e2e);
+    box-shadow: 10px 10px 15px #0b0b0b, -10px -10px 15px #373737;
+    border: 1px solid #03e9f4;
+}
+
+input#result {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    text-align: right;
+    background-color: #111;
+    color: #03e9f4;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 5px 5px 10px #0b0b0b, -5px -5px 10px #373737;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+}
+
+/* Different Colors for Different Buttons */
+button.clear {
+    background-color: #ff3e3e;
+    color: #fff;
+}
+
+button.delete {
+    background-color: #ff993e;
+    color: #fff;
+}
+
+button.operator {
+    background-color: #03e9f4;
+    color: #000;
+}
+
+button.function {
+    background-color: #ffae42;
+    color: #000;
+}
+
+button.bracket {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+button.number {
+    background-color: #6aff6a;
+    color: #000;
+}
+
+button.equal {
+    background-color: #03e9f4;
+    color: #000;
+}
+
+/* Hover effect with glow */
+button:hover {
+    transform: translateY(-3px);
+    background: #fff;
+    box-shadow: 0 0 10px #03e9f4, 0 0 20px #03e9f4, 0 0 30px #03e9f4;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
